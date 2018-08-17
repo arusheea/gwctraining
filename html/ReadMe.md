@@ -11,6 +11,7 @@ HTML is the first step to building a web page. In this module, you will get a ba
 	- [What is the body tag?](#body-tag)
 	- [What comes next?](#next-step)
 - [Formatting in HTML](#format)
+	- [Text Formatting](#text-format)
 - [Online Help and Resources](#help)
 
 ## <a name="intro"></a>Introduction: What is HTML?
@@ -81,7 +82,17 @@ Before we discuss the various elements provided in HTML to define different kind
 - **Block Elements** are those that are separate from the flow of the page. They are easy to move around and treat as separate entities from the whole page. Common examples of block elements include: paragraph `<p>`, heading tags `<h1>, <h2>... <h6>`, horizontal rule `<hr>`, table `<table>`, etc.  
 - **Inline Elements** are those that are within the flow of the page. All inline elements affect each other because they, by default, are stuck next to each other. Common examples of inline elements include: anchor `<a>`, span `<span>`, image `<img>`, etc. 
 
+#### <a name="text-format"></a>Text Formatting
 
+- Paragraph `<p>` is a block element. Everything within the opening and closing paragraph tags is marked as one paragraph. 
+- Heading tags are block elements. There are 6 levels of headings, with predefined styling, such that `<h1>` is the largest/highest level heading, `<h2>` is one below that, and so on till the smallest subheading `<h6>`. 
+- Bold text is defined using the `<b>` or the `<strong>` tag. Both are inline tags. 
+- Italics text is defined using the `<i>` or the `<em>` tag. Both are inline tags.
+- Subscript `<sub>` is used to define subscripted text. It is an inline tag. 
+- Superscript `<sup>` is used to define superscripted text. It is an inline tag. 
+- Header `<header>` defines the header of the page. 
+- Footer `<footer>` defines the footer of the page. 
+- Section `<section>` defines a section of the page. 
 
 ## <a name="help"></a>Online Help and Resources
 
