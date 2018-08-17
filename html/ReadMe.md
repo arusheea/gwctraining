@@ -71,9 +71,9 @@ Refer to the following code or look at `helloworld.html` in this directory. We w
 
 We now have a basic HTML page. To see how our web page actually looks, we can either download the `helloworld.html` file, or copy-paste the provided code into a text editor of your choice (Note Pad, TextEdit, Sublime Text, etc.) and save the file with a ".html" extension. After doing so, we can open our html file on a web browser like Chrome, Firefox, etc. to see our page. 
 
-<div class="exercise" style="background-color: lightskyblue; padding: 15px;">
+<span style="color: deepskyblue;">
 Try adding and removing elements in the page, adding and removing content inside the body tag, changing the title of the page, and more, to see what happens. Don't be afraid to ask questions or seek answers online!
-</div>
+</span>
 
 
 ## <a name="format"></a>Formatting in HTML
