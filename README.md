@@ -5,7 +5,7 @@ Material for GWC WashU Facilitator training and support material for student gro
 ### Contents 
 
 - [Required Setup](#setup)
-- [HTML Guide](https://github.com/arusheea/gwctraining/html)
-- [CSS Guide](https://github.com/arusheea/gwctraining/css)
+- [HTML Guide](https://github.com/arusheea/gwctraining/tree/master/html)
+- [CSS Guide](https://github.com/arusheea/gwctraining/tree/master/css)
 
 ## <a href='#setup'></a>Required Setup 
