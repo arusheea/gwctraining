@@ -11,10 +11,9 @@ HTML is the first step to building a web page. In this module, you will get a ba
 	- [What is the body tag?](#body-tag)
 	- [What are tag attributes?](#tag-attr)
 	- [What comes next?](#next-step)
-- [Formatting in HTML](#format)
-	- [Text Formatting](#text-format)
-	- [Adding images, links, and embedded content](#media-content)
-	- [Tables, lists, and forms](#addn-content)
+- [Text Formatting](#text-format)
+- [Adding images, links, and embedded content](#media-content)
+- [Tables, lists, and forms](#addn-content)
 - [Online Help and Resources](#help)
 - [Exercises](#exercises)
 
@@ -97,7 +96,7 @@ Before we discuss the various elements provided in HTML to define different kind
 - **Block Elements** are those that are separate from the flow of the page. They are easy to move around and treat as separate entities from the whole page. Common examples of block elements include: paragraph `<p>`, heading tags `<h1>, <h2>... <h6>`, horizontal rule `<hr>`, table `<table>`, etc.  
 - **Inline Elements** are those that are within the flow of the page. All inline elements affect each other because they, by default, are stuck next to each other. Common examples of inline elements include: anchor `<a>`, span `<span>`, image `<img>`, etc. 
 
-#### <a name="text-format"></a>Text Formatting
+## <a name="text-format"></a>Text Formatting
 
 - Paragraph `<p>` is a block element. Everything within the opening and closing paragraph tags is marked as one paragraph. 
 - Heading tags are block elements. There are 6 levels of headings, with predefined styling, such that `<h1>` is the largest/highest level heading, `<h2>` is one below that, and so on till the smallest subheading `<h6>`. 
@@ -113,50 +112,52 @@ Before we discuss the various elements provided in HTML to define different kind
 - Span `<span>` tags are usually used to group inline elements together. They provide no real information about what is within them, but allow for easy referencing during styling or scripting. This is an inline element as well. An example of when this would be used is to color a section of text within a paragraph. 
 - Div `<div>` tags are like span tags, but for block elements, or to create a block collection of other elements. An example of when this would be used is if we wanted a disclaimer to be stuck to one part of the page. 
 
-#### <a name="media-content"></a>Adding images, links, and embedded content
+## <a name="media-content"></a>Adding images, links, and embedded content
 
 - **Images** can be added using the `<img>` tag. An example of this would be `<img src="happyface.jpg" alt="smiley face image">`. Here the `src` attribute of the tag specifies the name of the image file (alternatively you could provide a link as well), and the `alt` attribute specifies the text to display if the web page is unable to load the image. Providing alternative text is also a good practice because it makes your web page accessible via screen readers. 
 - **Links** can be added using the `<a>` tag. An example of this would be `<a href="example.com">`. Here `href` specifies where the link will take us. Anchor tags also have some default styling which makes them appear blue and underlined for easy idenitfication, however we can easily change this as you will see in the CSS section. 
 - **Embedded content** is usually added using `<iframe>` tags. This also has an `src` attribute that is used to specify what we want to embed. This is often used to embed other web pages, videos, and links into our web page. A common example of this can be seen when we try to embed a YouTube video (Give it a shot! You'll see that YouTube provides you a copyable line of HTML which is an iframe tag leading to the specific video)
 - **Videos** can be added using the `<video>` tag, although this is relatively new. An example of how to do this is:
-```
-<video width="320" height="240" controls>
-	<source src="movie.mpg" type="video/mp4">
-	<source src="movie.ogg" type="video/ogg">
-	Your browser does not support Video tags.
-</video>
-```
-This would create a video with of 320x240 pixels (specified by the attributes), and the controls attribute would specify that we want video controls to appear on it. Within the tag, there are self-closing source tags, with `src` attributes giving paths/links to the video we want to include, and `type` attributes specifying the filetype. The last line under the source tags is just in case video tags are not supported by a browser, because it is relatively new. 
+	```
+	<video width="320" height="240" controls>
+		<source src="movie.mpg" type="video/mp4">
+		<source src="movie.ogg" type="video/ogg">
+		Your browser does not support Video tags.
+	</video>
+	```
+	This would create a video with of 320x240 pixels (specified by the attributes), and the controls attribute would specify that we want video controls to appear on it. Within the tag, there are self-closing source tags, with `src` attributes giving paths/links to the video we want to include, and `type` attributes specifying the filetype. The last line under the source tags is just in case video tags are not supported by a browser, because it is relatively new. 
 
-#### <a name="addn-content"></a>Tables, lists, and forms
+## <a name="addn-content"></a>Tables, lists, and forms
 
 - **Lists** can be created using the `<ul>` or `<ol>` tags, i.e. the unordered list (bullets, discs, etc.) and the ordered list (numbers, alphabets, etc.) tags. Within the opening and closing tags of either, we include `<li>` or list items, and specify each item in the list. An example of a simple unordered list would be: 
-```
-My Grocery List
-<ul>
-	<li>Milk</li>
-	<li>Spinach</li>
-	<li>Apple</li>
-</ul>
-```
+	```
+	My Grocery List
+	<ul>
+		<li>Milk</li>
+		<li>Spinach</li>
+		<li>Apple</li>
+	</ul>
+	```
 - **Tables** can be added using the `<table>` tag. Tables require several nested tags to provide all the information to build them. The general structure is: 
-```
-<table>
-	<tr>
-		<th>First column title</th>
-		<th>Second column title</th>
-	</tr>
-	<tr>
-		<td>First column value #1</td>
-		<td>Second column value #1</td>
-	</tr>
-	<tr>
-		<td>First column value #2</td>
-		<td>Second column value #2</td>
-	</tr>
-</table>
-```
-This would generate a table with three rows, and two columns. As you can see, the table tag defines that we are creating a table, but nothing else. After that, we need to add table rows with the `<tr>` tag, and within each table row, we had `<th>` or `<td>` elements to define columns within that row from left to right. `<th>` is usually used for table headings, while `<td>` is for the rest of the data in the table. 
+	```
+	<table>
+		<tr>
+			<th>First column title</th>
+			<th>Second column title</th>
+		</tr>
+		<tr>
+			<td>First column value #1</td>
+			<td>Second column value #1</td>
+		</tr>
+		<tr>
+			<td>First column value #2</td>
+			<td>Second column value #2</td>
+		</tr>
+	</table>
+	```
+	This would generate a table with three rows, and two columns. As you can see, the table tag defines that we are creating a table, but nothing else. After that, we need to add table rows with the `<tr>` tag, and within each table row, we had `<th>` or `<td>` elements to define columns within that row from left to right. `<th>` is usually used for table headings, while `<td>` is for the rest of the data in the table. 
+
+	**NOTE:** tables in HTML have a default border of 0 pixels, so do not be alarmed if no lines are visible when you try to create a table. We will cover how to make these lines visible using CSS. 
 - **Forms** can be made using the `<form>` tag. Like the table tag, form doesn't create anything by default, but only indicates that a form is being created within it. Using the `action` attribute, we can also specify where the information from the form is submit if a submit button within it is clicked. The real information from the user, however is provided by `<input>` tags. Input tags are of various types, including but not limited to:
 	- text input
 	- checkbox
@@ -190,7 +191,7 @@ This would generate a table with three rows, and two columns. As you can see, th
 ## <a name="help"></a>Online Help and Resources
 
 - [W3Schools](https://www.w3schools.com/html/default.asp) is a great website to learn more about HTML. It has definitions of all HTML tags, across versions of HTML, as well as example code, and some interactive environments or exercises you can use to learn beyond what is covered here. 
-- 
+- [Beginner's guide to HTML](https://www.beginnersguidetohtml.com/guides/html/) also has some good examples of HTML code in their tutorials. 
 
 ## <a name="exercises"></a>Exercises
 
