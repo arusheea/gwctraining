@@ -14,6 +14,7 @@ HTML is the first step to building a web page. In this module, you will get a ba
 - [Formatting in HTML](#format)
 	- [Text Formatting](#text-format)
 - [Online Help and Resources](#help)
+- [Exercises](#exercises)
 
 ## <a name="intro"></a>Introduction: What is HTML?
 
@@ -75,10 +76,10 @@ Tag attributes are additional details provided for tags. An example of an attrib
 - Anchor `<a>` tags are used to create hyperlinks. An important attribute for anchor tags is `href` which specifies where the hyperlink leads. So `<a href="example.com">click me</a>` would create a hyperlink leading to example.com. 
 - Input `<input>` tags are used to create some kind of input in a form. An attribute we often need for input is `type` which specifies if we want a text box input, a checkbox, radio button, button, etc. 
 
-Most html elements can be provided a `name`, `class`, or `id` attribute (or any combination thereof). These specifiers are useful in selecting/refering to elements or sets of elements when we write CSS for styling our web pages, or JavaScript to build interactivity. 
-	- `name` just specifies a name for an element. For e.g. in the provided code, the name for the second meta tag is author, so we know there is a piece of meta data called author, with the content "Your Name".
-	- `class` is used to create groups of elements in html pages, so several elements on the page can have the same class. These are used for several reasons, for example if we want to apply certain styling to some elements on the page, we can give them the same class name and write CSS for that class. 
-	- `id` is a **unique** identifier for an element. No two elements on the page should have the same id. 
+Most html elements can be provided a `name`, `class`, or `id` attribute (or any combination thereof). These specifiers are primarily useful in selecting/refering to elements or sets of elements when we write CSS for styling our web pages, or JavaScript to build interactivity. Although it doesn't directly change anything on our web page before we add styles or scripts, it's a good habit to think about which elements need a name, id or class. 
+- `name` just specifies a name for an element. For e.g. in the provided code, the name for the second meta tag is author, so we know there is a piece of meta data called author, with the content "Your Name".
+- `class` is used to create groups of elements in html pages, so several elements on the page can have the same class. These are used for several reasons, for example if we want to apply certain styling to some elements on the page, we can give them the same class name and write CSS for that class. 
+- `id` is a **unique** identifier for an element. No two elements on the page should have the same id. 
 
 #### <a name="next-step"></a>What comes next?
 
@@ -100,13 +101,51 @@ Before we discuss the various elements provided in HTML to define different kind
 - Heading tags are block elements. There are 6 levels of headings, with predefined styling, such that `<h1>` is the largest/highest level heading, `<h2>` is one below that, and so on till the smallest subheading `<h6>`. 
 - Bold text is defined using the `<b>` or the `<strong>` tag. Both are inline tags. 
 - Italics text is defined using the `<i>` or the `<em>` tag. Both are inline tags.
+- Underlined text is defined using the `<u>` tag. This is an inline tag.
 - Subscript `<sub>` is used to define subscripted text. It is an inline tag. 
 - Superscript `<sup>` is used to define superscripted text. It is an inline tag. 
 - Header `<header>` defines the header of the page. 
 - Footer `<footer>` defines the footer of the page. 
 - Section `<section>` defines a section of the page. 
 
+#### <a name="addn-content"></a>Adding images, links, and more
+
+- **Images** can be added using the `<img>` tag. An example of this would be `<img src="happyface.jpg" alt="smiley face image">`. Here the `src` attribute of the tag specifies the name of the image file (alternatively you could provide a link as well), and the `alt` attribute specifies the text to display if the web page is unable to load the image. Providing alternative text is also a good practice because it makes your web page accessible via screen readers. 
+- **Links** can be added using the `<a>` tag. An example of this would be `<a href="example.com">`. Here `href` specifies where the link will take us. Anchor tags also have some default styling which makes them appear blue and underlined for easy idenitfication, however we can easily change this as you will see in the CSS section. 
+- **Lists** can be created using the `<ul>` or `<ol>` tags, i.e. the unordered list (bullets, discs, etc.) and the ordered list (numbers, alphabets, etc.) tags. Within the opening and closing tags of either, we include `<li>` or list items, and specify each item in the list. An example of a simple unordered list would be: 
+```
+My Grocery List
+<ul>
+	<li>Milk</li>
+	<li>Spinach</li>
+	<li>Apple</li>
+</ul>
+```
+- **Tables** can be added using the `<table>` tag. Tables require several nested tags to provide all the information to build them. The general structure is: 
+```
+<table>
+	<tr>
+		<th>First column title</th>
+		<th>Second column title</th>
+	</tr>
+	<tr>
+		<td>First column value #1</td>
+		<td>Second column value #1</td>
+	</tr>
+	<tr>
+		<td>First column value #2</td>
+		<td>Second column value #2</td>
+	</tr>
+</table>
+```
+This would generate a table with three rows, and two columns. As you can see, the table tag defines that we are creating a table, but nothing else. After that, we need to add table rows with the `<tr>` tag, and within each table row, we had `<th>` or `<td>` elements to define columns within that row from left to right. `<th>` is usually used for table headings, while `<td>` is for the rest of the data in the table. 
+
 ## <a name="help"></a>Online Help and Resources
 
 - [W3Schools](https://www.w3schools.com/html/default.asp) is a great website to learn more about HTML. It has definitions of all HTML tags, across versions of HTML, as well as example code, and some interactive environments or exercises you can use to learn beyond what is covered here. 
 - 
+
+## <a name="exercises"></a>Exercises
+
+- [Exercise 1](https://arusheea.github.io/gwctraining/html/exercises-solutions/exercise1.html)
+- [Exercise 2]()
