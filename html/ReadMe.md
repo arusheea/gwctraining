@@ -9,6 +9,7 @@ HTML is the first step to building a web page. In this module, you will get a ba
 	- [What is an HTML tag?](#tags)
 	- [What is the head tag?](#head-tag)
 	- [What is the body tag?](#body-tag)
+	- [What are tag attributes?](#tag-attr)
 	- [What comes next?](#next-step)
 - [Formatting in HTML](#format)
 	- [Text Formatting](#text-format)
@@ -67,6 +68,17 @@ Refer to the following code or look at `helloworld.html` in this directory. We w
 
 - The body tag `<body>` is used to specify the body of the page, which has the actual contents of the page, including text, images, videos, hyperlinks, etc. 
 - For e.g. in the example code, the body contains the text "Hello World" so if you load the web page, the only thing we see on the screen are these two words. If we change these two words, the content on the screen will change as well. 
+
+#### <a name="tag-attr"></a>What are tag attributes?
+
+Tag attributes are additional details provided for tags. An example of an attribute in the provided code would be `charset` for the `<meta>` tag. Some other examples include: 
+- Anchor `<a>` tags are used to create hyperlinks. An important attribute for anchor tags is `href` which specifies where the hyperlink leads. So `<a href="example.com">click me</a>` would create a hyperlink leading to example.com. 
+- Input `<input>` tags are used to create some kind of input in a form. An attribute we often need for input is `type` which specifies if we want a text box input, a checkbox, radio button, button, etc. 
+
+Most html elements can be provided a `name`, `class`, or `id` attribute (or any combination thereof). These specifiers are useful in selecting/refering to elements or sets of elements when we write CSS for styling our web pages, or JavaScript to build interactivity. 
+	- `name` just specifies a name for an element. For e.g. in the provided code, the name for the second meta tag is author, so we know there is a piece of meta data called author, with the content "Your Name".
+	- `class` is used to create groups of elements in html pages, so several elements on the page can have the same class. These are used for several reasons, for example if we want to apply certain styling to some elements on the page, we can give them the same class name and write CSS for that class. 
+	- `id` is a **unique** identifier for an element. No two elements on the page should have the same id. 
 
 #### <a name="next-step"></a>What comes next?
 
