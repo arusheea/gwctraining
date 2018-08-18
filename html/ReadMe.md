@@ -169,7 +169,7 @@ This would generate a table with three rows, and two columns. As you can see, th
 	- time 
 	- date
 
-The type is specified as an attribute, like `<input type="text">`. But there is a lot we can do with most types of input, especially text, using attributes. We can:
+	The type is specified as an attribute, like `<input type="text">`. But there is a lot we can do with most types of input, especially text, using attributes. We can:
 	- provide a placeholder
 	- provide a pattern the input must match
 	- make an input read-only 
@@ -177,15 +177,15 @@ The type is specified as an attribute, like `<input type="text">`. But there is 
 	- specify a maximum length for a field
 	- indicate that an input is checked or disabled or autocompleted
 
-and more! We can also specify `name` or `value` attributes for our inputs, and pair input elements with `<label>` tags like so: `<label for="username">Username:</label><input type="text" name="username">`
+	and more! We can also specify `name` or `value` attributes for our inputs, and pair input elements with `<label>` tags like so: `<label for="username">Username:</label><input type="text" name="username">`
 
-Input elements can be used without a form tag as well, though they would not get submitted anywhere. Additionally, please note that the following tags also take user input, and can be used within a form:
+	Input elements can be used without a form tag as well, though they would not get submitted anywhere. Additionally, please note that the following tags also take user input, and can be used within a form:
 	- `<textarea>` allows for multi-line text input, but is otherwise similar to input type text
 	- `<select>` to select from a drop-down list
 	- `<option>` is used to specify values for the drop-down list, within the select tag
 	- `<button>` similar to the input type button  
 
-To talk more about how to create a submittable form, feel free to reach out to us! It involves dealing with other programming languages, so it will not be covered in this module. 
+	To talk more about how to create a submittable form, feel free to reach out to us! It involves dealing with other programming languages, so it will not be covered in this module. 
 
 ## <a name="help"></a>Online Help and Resources
 
