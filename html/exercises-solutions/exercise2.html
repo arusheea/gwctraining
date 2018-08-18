@@ -6,6 +6,27 @@
 	</head>
 	<body>
 		<h1>Exercise 2</h1>
-		
+		<p>Build a personal information form! Think about what kind of input elements you would need for each field and decide for yourself.</p>
+		<form>
+			<h4>Identity details</h4>
+			<label for="firstname">First Name: </label><input type="text" name="firstname" required><br>
+			<label for="lastname">Last Name: </label><input type="text" name="lastname" required><br>
+			<label for="mid">Middle Initials: </label><input type="text" name="mid"><br>
+			<label for="dob">Date of Birth: </label><input type="date" name="dob"><br>
+			<hr>
+			<h4>Contact details</h4>
+			<label for="email">Email address: </label><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+			<label for="phonenum">Phone Number: </label><input type="text" name="phonenum" maxlength="10" minlength="10"><br>
+			<hr>
+			<h4>Preferences</h4>
+			<label for="favcolor">Fav Color: </label><input type="color" name="favcolor"><br>
+			<label for="favshow">Fav Show: </label><select>
+				<option>Brooklyn 99</option>
+				<option>The Office</option>
+				<option>Friends</option>
+			</select><br>
+			<hr>
+			<input type="submit" name="submit">
+		</form>
 	</body>
 </html>
