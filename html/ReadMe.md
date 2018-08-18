@@ -13,6 +13,8 @@ HTML is the first step to building a web page. In this module, you will get a ba
 	- [What comes next?](#next-step)
 - [Formatting in HTML](#format)
 	- [Text Formatting](#text-format)
+	- [Adding images, links, and embedded content](#media-content)
+	- [Tables, lists, and forms](#addn-content)
 - [Online Help and Resources](#help)
 - [Exercises](#exercises)
 
@@ -102,16 +104,32 @@ Before we discuss the various elements provided in HTML to define different kind
 - Bold text is defined using the `<b>` or the `<strong>` tag. Both are inline tags. 
 - Italics text is defined using the `<i>` or the `<em>` tag. Both are inline tags.
 - Underlined text is defined using the `<u>` tag. This is an inline tag.
+- Text can be highlightes using the inline `<mark>` tag. 
 - Subscript `<sub>` is used to define subscripted text. It is an inline tag. 
 - Superscript `<sup>` is used to define superscripted text. It is an inline tag. 
 - Header `<header>` defines the header of the page. 
 - Footer `<footer>` defines the footer of the page. 
 - Section `<section>` defines a section of the page. 
+- Span `<span>` tags are usually used to group inline elements together. They provide no real information about what is within them, but allow for easy referencing during styling or scripting. This is an inline element as well. An example of when this would be used is to color a section of text within a paragraph. 
+- Div `<div>` tags are like span tags, but for block elements, or to create a block collection of other elements. An example of when this would be used is if we wanted a disclaimer to be stuck to one part of the page. 
 
-#### <a name="addn-content"></a>Adding images, links, and more
+#### <a name="media-content"></a>Adding images, links, and embedded content
 
 - **Images** can be added using the `<img>` tag. An example of this would be `<img src="happyface.jpg" alt="smiley face image">`. Here the `src` attribute of the tag specifies the name of the image file (alternatively you could provide a link as well), and the `alt` attribute specifies the text to display if the web page is unable to load the image. Providing alternative text is also a good practice because it makes your web page accessible via screen readers. 
 - **Links** can be added using the `<a>` tag. An example of this would be `<a href="example.com">`. Here `href` specifies where the link will take us. Anchor tags also have some default styling which makes them appear blue and underlined for easy idenitfication, however we can easily change this as you will see in the CSS section. 
+- **Embedded content** is usually added using `<iframe>` tags. This also has an `src` attribute that is used to specify what we want to embed. This is often used to embed other web pages, videos, and links into our web page. A common example of this can be seen when we try to embed a YouTube video (Give it a shot! You'll see that YouTube provides you a copyable line of HTML which is an iframe tag leading to the specific video)
+- **Videos** can be added using the `<video>` tag, although this is relatively new. An example of how to do this is:
+```
+<video width="320" height="240" controls>
+	<source src="movie.mpg" type="video/mp4">
+	<source src="movie.ogg" type="video/ogg">
+	Your browser does not support Video tags.
+</video>
+```
+This would create a video with of 320x240 pixels (specified by the attributes), and the controls attribute would specify that we want video controls to appear on it. Within the tag, there are self-closing source tags, with `src` attributes giving paths/links to the video we want to include, and `type` attributes specifying the filetype. The last line under the source tags is just in case video tags are not supported by a browser, because it is relatively new. 
+
+#### <a name="addn-content"></a>Tables, lists, and forms
+
 - **Lists** can be created using the `<ul>` or `<ol>` tags, i.e. the unordered list (bullets, discs, etc.) and the ordered list (numbers, alphabets, etc.) tags. Within the opening and closing tags of either, we include `<li>` or list items, and specify each item in the list. An example of a simple unordered list would be: 
 ```
 My Grocery List
@@ -139,6 +157,33 @@ My Grocery List
 </table>
 ```
 This would generate a table with three rows, and two columns. As you can see, the table tag defines that we are creating a table, but nothing else. After that, we need to add table rows with the `<tr>` tag, and within each table row, we had `<th>` or `<td>` elements to define columns within that row from left to right. `<th>` is usually used for table headings, while `<td>` is for the rest of the data in the table. 
+- **Forms** can be made using the `<form>` tag. Like the table tag, form doesn't create anything by default, but only indicates that a form is being created within it. Using the `action` attribute, we can also specify where the information from the form is submit if a submit button within it is clicked. The real information from the user, however is provided by `<input>` tags. Input tags are of various types, including but not limited to:
+	- text input
+	- checkbox
+	- radio button
+	- button
+	- submit button
+	- password (like text input, but hides the characters)
+	- number (like text input, but allows only numbers)
+	- color (creates colorpicker)
+	- time 
+	- date
+The type is specified as an attribute, like `<input type="text">`. But there is a lot we can do with most types of input, especially text, using attributes. We can:
+	- provide a placeholder
+	- provide a pattern the input must match
+	- make an input read-only 
+	- make an input required
+	- specify a maximum length for a field
+	- indicate that an input is checked or disabled or autocompleted
+and more! We can also specify `name` or `value` attributes for our inputs, and pair input elements with `<label>` tags like so: `<label for="username">Username:</label><input type="text" name="username">`
+
+Input elements can be used without a form tag as well, though they would not get submitted anywhere. Additionally, please note that the following tags also take user input, and can be used within a form:
+	- `<textarea>` allows for multi-line text input, but is otherwise similar to input type text
+	- `<select>` to select from a drop-down list
+	- `<option>` is used to specify values for the drop-down list, within the select tag
+	- `<button>` similar to the input type button  
+
+To talk more about how to create a submittable form, feel free to reach out to us! It involves dealing with other programming languages, so it will not be covered in this module. 
 
 ## <a name="help"></a>Online Help and Resources
 
@@ -148,4 +193,4 @@ This would generate a table with three rows, and two columns. As you can see, th
 ## <a name="exercises"></a>Exercises
 
 - [Exercise 1](https://arusheea.github.io/gwctraining/html/exercises-solutions/exercise1.html)
-- [Exercise 2]()
+- [Exercise 2](https://arusheea.github.io/gwctraining/html/exercises-solutions/exercise2.html)

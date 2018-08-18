@@ -4,6 +4,7 @@ Material for GWC WashU Facilitator training and support material for student gro
 
 - The ReadMe.md files inside each directory have information on the specified topic, including examples. 
 - At the end of each ReadMe, there are links to additional resources, and to exercises. Each link to an exercise will lead to a page that you should try to replicate. The solutions to these exercises will be inside the exercises-solutions directory. 
+- The exercises should ideally be done without looking at the solution – the solutions are provided primarily for comparison and seeing ideal practices. Feel free to refer to your study material, and google for answers while working on them. They are mostly meant to refresh your memory on small items covered across the module. 
 
 ### Contents 
 
