@@ -20,11 +20,11 @@ Now we have learned how to make a web page using HTML, but it doesn't look so pr
 	- Create fixed navigation bars 
 	- Style tables to appear more user friendly 
 - In CSS, we use selectors to specify which elements we are styling, and then provide details on what styles we want to apply, like this: 
-```
-<selector> {
-	<property>: <value>;
-}
-```
+	```
+	<selector> {
+		<property>: <value>;
+	}
+	```
 - **Important Note:** Although CSS can dramatically change the way a page looks, it is important to write good HTML as well. Try to use appropriate tags for everything in HTML and then style according to your needs, for e.g. although we can style any word to look like a heading using CSS, we should always try to make headings using the `<h1>`...`<h6>` tags. 
 
 ## <a name="adding"></a>Adding CSS to an HTML document
@@ -32,7 +32,9 @@ Now we have learned how to make a web page using HTML, but it doesn't look so pr
 There are three ways to add CSS to our HTML documents: 
 - **Inline CSS:** We can add CSS styling for each individual element by adding it as an attribute in the HTML tag. This is useful if we have style to add to only one element in the page, but it is relatively inefficient if we have the same styles applied across various elements, because then if we need to change anything, we will have to go to each element and change it manually. An example of this is `<a href="example.com" style="text-decoration: none; color: red;">Click me</a>` This would create a red colored link saying 'Click me' that is not underlined. 
 - **Style tags inside the document:** We can add CSS styles for the entire document between `<style>` tags inside the head. This is better than Inline CSS, because if we want to apply the same style across elements on the page, we can easily change it in one place to affect the whole document! An example of this can be seen in `helloworld.html`. (Don't worry about understanding what's within the style tags just yet, we will get into that soon!)
-- **External style documents:** We can link an external CSS file by making a CSS file (a document with a .css extension) and linking it to our HTML document. This is especially useful if we want to use the same stylesheet for various HTML documents instead of rewriting it. We do so by using a `<link>` tag in the head of the document. It looks something like this: `<link href="style.css" rel="stylesheet">`.
+- **External style documents:** We can link an external CSS file by making a CSS file (a document with a .css extension) and linking it to our HTML document. This is especially useful if we want to use the same stylesheet for various HTML documents instead of rewriting it. We do so by using a `<link>` tag in the head of the document. It looks something like this: `<link href="style.css" rel="stylesheet">`. This tends to be my preferred way of adding CSS because 
+	- We separate style from content.
+	- More often than not, we have more than one web page in a website, and we want to keep the styling consistent for the website, and applying the same stylesheet to all pages is an easy way to do that. 
 
 ## <a name="selectors"></a>Selectors
 
