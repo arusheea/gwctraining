@@ -50,7 +50,7 @@ We will discuss more about selectors, and cover different ways of choosing speci
 
 Below we will discuss some common CSS properties, and the kinds of values they can take. 
 
-#### Sizing and spacing of elements 
+### Sizing and spacing of elements 
 
 - `width` and `height`: Specify the width and height of an element with a unit (pixels px, cm, mm, etc.) or as a percentage of the containing element.
 - `max-width` and `max-height`: Specify the maximum width and height of the element. This is useful if the height and width are dependent on the page size, and we want to ensure it doesn't get larger than a certain size.
@@ -85,22 +85,23 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 
 - `box-sizing`: This is an important and interesting property. Its default value is content-box, which means that the width and height of an element do not include the borders and padding. The other value is border-box, which makes width and height include borders and padding. When we set box-sizing to border-box, the width and height are treated as the fixed values of width and height regardless of padding and borders. To understand this better, notice how the third div in `helloworld.html` is different from the others in terms of size. 
 
-#### Background formatting, borders, and colors 
+### Background formatting, borders, and colors 
 
 > Note on CSS color values: Color can be specified using either 
 > - The 140 [predefined colors in HTML](https://www.w3schools.com/colors/colors_names.asp)
 > - Functions that generate colors, for e.g. rgb(red-value, green-value, blue-value)/rgba(red-value, green-value, blue-value, transparency) where the first the color values must be between 0 and 255, and the transparency is between 0 and 1
 > - Hex values, of the format #(3 or 6 digit code)
 
-- `color`: specifies the color of text within the styled element
+- `color`: Specifies the color of text within the styled element.
+- `opacity`: Takes a value between 0 and 1 as the opacity of the element. 0 is transparent, and 1 is opaque. 
 
 **Background:**
-- `background-color`: used to specify a background color 
+- `background-color`: Used to specify a background color.
 - `background-image`: A path to a local file or a link to an online image like this `url(path/link)` to set it as the background image of the specified element.
 - `background-position`: Aligns the background image within the element to either any combination (left top, right center, center top etc.), two percentages as the distance of the left and bottom edges respectively from the top left corner of the container, or two values as the horizontal and vertical distance from the top left corner of the container respectively. 
 - `background-size`: auto (original size) | length (two values that set the width and height) | percentage (two values that set the width and height as a percentage of the parent element) | cover (resize to fill the whole area) | contain (resize to have the full image fit in the area)
 - `background-repeat`: repeat (repeat image in any direction if the background is too small) | repeat-x (repeat in only the horizontal direction) | repeat-y (repeat in only the vertical direction) | no-repeat (do not repeat) | space (repeat as much as possible without clipping) | round (repeat and squish/stretch the image to fill the whole area)
-- `background`: Can be used to specify numerous properties of an element's background mentioned above, and a few more that are used as often. We can list numerous properties, space-separated, and they will all be applied to the background like the individual properties above are. Syntax is: `bg-color bg-image bg-position/bg-size bg-repeat ...`
+- `background`: Can be used to specify numerous properties of an element's background mentioned above, and a few more that are used as often. We can list numerous properties, space-separated, and they will all be applied to the background like the individual properties above are. Syntax is: `bg-color bg-image bg-position/bg-size bg-repeat ...` in any order.
 
 **Borders:**
 - `border-width`: Specifies the width of a border with some unit. There are also specific properties for the left, right, bottom and top border's width.
@@ -108,17 +109,39 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `border-style`: Specifies the type of border (none, hidden, solid, dotted, dashed, double etc.) There are also specific properties for the left, right, bottom and top border's style.
 - `border`: Like background, border can be used to specify several properties that can also be specified separately, however I usually prefer using the border tag to specify everything, like this: `border-width border-style border-color`. The only case where this is not as useful is when we need variable border widths on different sides. 
 - `border-radius`: This defines the curve radius of the element's corners. We can provide oen value (applied on all corners), two values (first for top-left, bottom-right and second for top-right, bottom-left), three values (first for top-left, second for top-right, bottom-left, and third for bottom-right), and four values (for top-left, top-right, bottom-right, bottom-left respectively). There are also specific properties for the top-left, top-right, bottom-left and bottom-right border radii. 
+- `border-collapse`: This is primarily useful for tables because once we put a border value for tables, and their lines actually show up, they are double lines usually. Border collapse makes these double lines coverge into single lines for clean tables. The value just has to be set to 'collapse'. 
 
-#### Display properties and positioning 
+### Display properties and positioning 
 
-- `display`: changes the default display value of elements to block, inline, inline-block, and none (removes the element from the document). Block and Inline were discussed in the HTML module, but inline-block is different in that it stays on the same line like inline elements but respects width, height, padding and margin properties provided (which inline elements do not).
-- `text-align`: controls the alignment of text within an element, can be center, left, right etc. 
+- `display`: Changes the default display value of elements to block, inline, inline-block, and none (removes the element from the document). Block and Inline were discussed in the HTML module, but inline-block is different in that it stays on the same line like inline elements but respects width, height, padding and margin properties provided (which inline elements do not).
+- `text-align`: Controls the alignment of text within an container, can be center, left, right etc. 
+- `text-indent`: Controls how much the text in the given styled element will be indented from its aligned side. 
+- `vertical-align`:
 - `position`: 
+- `float`:
+- `z-index`: This property is a number that specifies the arrangement of elements in the front or back of the page. The higher the z-index of an element, the higher up it will stack. So if two elements overlap at all, the one with a higher z-index will be at the top. 
+
+### Text formatting
+
+- `font-family`: Specifies the font family we wish to use in a given element. We can also write serif, sans-serif, or monospace to get the default fonts in each category. 
+- `font-size`: Specifies the size of the text in the element.
+- `font-style`: Allows us to make text italic or oblique, or just normal. 
+- `font-weight`: Specifies the boldness/heaviness of the text in the element being styled, granted that the font family chosen has bolder or lighter options.
+- `letter-spacing`: Specifies size of the whiespace between characters.
+- `line-height`: Specifies the height of any line of text in the given styled element. 
+- `font`: Allows us to specify all the font properties in one go, like we can with background and border. The syntax is: `font-size/line-height font-family font-style font-weight` in any order.
+- `word-spacing`: Specifies size of the whitespace between words. 
+- `text-decoration`: Allows us to specify the type(s) of text-decoration we want (underline, overline, or line-through), the color of the text-decoration, and the style (solid, wavy, dotted, dashed etc.) like so: `text-decoration-line text-decoration-color text-decoration-style` in any order. All three of these are also individual properties. Only the first value (line) is required out of the three. 
+
+## <a name="adv-select"></a>Advanced Selectors
 
 ## <a name="help"></a>Online Help and Resources
 
 - [W3Schools](https://www.w3schools.com/css/default.asp) is a great website to learn more about CSS. It has examples of various things you might want to do with CSS, a list of selectors and properties and values, and interactive environments where you can easily play with CSS and see how it affects your page. 
-- [CSS Diner](https://flukeout.github.io/) is a fun game created to help people practice using CSS selectors appropriately, with a mix of real and made up HTML tags.  
+- [CSS Diner](https://flukeout.github.io/) is a fun game created to help people practice using CSS selectors appropriately, with a mix of real and made up HTML tags. 
+- [Box Shadow Generator](https://www.cssmatic.com/box-shadow) is useful to automatically generate box shadows of your choice, which is easier usually than writing them from scratch. 
+- [Text Shadow Generator](https://css3gen.com/text-shadow/) is useful in a similar way for making text shadows instead of writing them from scratch. 
+- [Animation using CSS](https://www.w3schools.com/css/css3_animations.asp) is a rather complex topic, but if you're motivated and would like to try it after mastering the basics, then I recommend this resource. 
 
 ## <a name="exercises"></a>Exercises
 
