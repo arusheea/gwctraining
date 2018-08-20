@@ -8,6 +8,8 @@ Now we have learned how to make a web page using HTML, but it doesn't look so pr
 - [Adding CSS to an HTML document](#adding)
 - [Basic Selectors](#selectors)
 - [What can we style?](#whatwedo)
+- [Some Examples](#examples)
+- [Advanced Selectors](#adv-select)
 - [Online Help and Resources](#help)
 - [Exercises](#exercises)
 
@@ -107,7 +109,7 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `border-width`: Specifies the width of a border with some unit. There are also specific properties for the left, right, bottom and top border's width.
 - `border-color`: Specifies the color of the border. There are also specific properties for the left, right, bottom and top border's color.
 - `border-style`: Specifies the type of border (none, hidden, solid, dotted, dashed, double etc.) There are also specific properties for the left, right, bottom and top border's style.
-- `border`: Like background, border can be used to specify several properties that can also be specified separately, however I usually prefer using the border tag to specify everything, like this: `border-width border-style border-color`. The only case where this is not as useful is when we need variable border widths on different sides. 
+- `border`: Like background, border can be used to specify several properties that can also be specified separately, however I usually prefer using the border tag to specify everything, like this: `border-width border-style border-color` in any order. The only case where this is not as useful is when we need variable border widths on different sides. 
 - `border-radius`: This defines the curve radius of the element's corners. We can provide oen value (applied on all corners), two values (first for top-left, bottom-right and second for top-right, bottom-left), three values (first for top-left, second for top-right, bottom-left, and third for bottom-right), and four values (for top-left, top-right, bottom-right, bottom-left respectively). There are also specific properties for the top-left, top-right, bottom-left and bottom-right border radii. 
 - `border-collapse`: This is primarily useful for tables because once we put a border value for tables, and their lines actually show up, they are double lines usually. Border collapse makes these double lines coverge into single lines for clean tables. The value just has to be set to 'collapse'. 
 
@@ -116,9 +118,13 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `display`: Changes the default display value of elements to block, inline, inline-block, and none (removes the element from the document). Block and Inline were discussed in the HTML module, but inline-block is different in that it stays on the same line like inline elements but respects width, height, padding and margin properties provided (which inline elements do not).
 - `text-align`: Controls the alignment of text within an container, can be center, left, right etc. 
 - `text-indent`: Controls how much the text in the given styled element will be indented from its aligned side. 
-- `vertical-align`:
-- `position`: 
-- `float`:
+- `vertical-align`: Sets the vertical alignment of an element with respect to it's parent container. It's values can be baseline (default), length (amount to raise/lower from baseline), % (to raise/lower from baseline), sub (aligned with subscript baseline), super (aligned with superscript baseline), top (aligned to top of tallest element), text-top (aligned with top of font), middle (middle of parent element), bottom (aligned with lowest element), or text-bottom.
+- `position`: Specifies an element's positioning method. 
+	- static: default value, in document flow
+	- absolute: element is positioned relevant to the first positioned (non-static) element
+	- fixed: positioned relative to browser window (use left, right, top, bottom properties to move element around the page!)
+	- relative: element positioned relative to it's default static position 
+- `float`: Non-absolute positioned elements can float. Float is none by default but we can specify left or right to make elements move to the right or left by default. 
 - `z-index`: This property is a number that specifies the arrangement of elements in the front or back of the page. The higher the z-index of an element, the higher up it will stack. So if two elements overlap at all, the one with a higher z-index will be at the top. 
 
 ### Text formatting
@@ -133,7 +139,13 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `word-spacing`: Specifies size of the whitespace between words. 
 - `text-decoration`: Allows us to specify the type(s) of text-decoration we want (underline, overline, or line-through), the color of the text-decoration, and the style (solid, wavy, dotted, dashed etc.) like so: `text-decoration-line text-decoration-color text-decoration-style` in any order. All three of these are also individual properties. Only the first value (line) is required out of the three. 
 
+## <a name="examples"></a>Some Examples 
+
+- Check out `navbar.html` and `navbar.css` for an example webpage with a navigation bar stuck to the top of a page. You can see it live [here](https://arusheea.github.io/gwctraining/css/navbar.html). 
+
 ## <a name="adv-select"></a>Advanced Selectors
+
+More material will be added here soon! 
 
 ## <a name="help"></a>Online Help and Resources
 
@@ -145,5 +157,6 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 
 ## <a name="exercises"></a>Exercises
 
-- [Exercise 1](https://arusheea.github.io/gwctraining/css/exercises-solutions/exercise1.html)
-- [Exercise 2](https://arusheea.github.io/gwctraining/css/exercises-solutions/exercise2.html)
+- Exercise 1: You have been provided [this](https://arusheea.github.io/gwctraining/css/exercises/exercise1.html) page, called exercise1.html inside the exercises directory, and you have to make it look like [this](https://arusheea.github.io/gwctraining/css/exercises-solutions/exercise1.html) by adding CSS. 
+- Exercise 2: You have been provided [this](https://arusheea.github.io/gwctraining/css/exercises/exercise2.html) page, called exercise2.html inside the exercises directory, and you have to make it look like [this](https://arusheea.github.io/gwctraining/css/exercises-solutions/exercise2.html) by adding CSS. 
+- Suggested Challenge: Select a simple website you like, and pick a page (perhaps the homepage), and try to recreate it's content. You don't need to worry about interactivity just yet, but try to make it as close to the real thing as possible. It will motivate you to google and learn how to do various things that you might otherwise not try out. 
