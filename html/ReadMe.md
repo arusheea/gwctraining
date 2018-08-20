@@ -93,8 +93,8 @@ We now have a basic HTML page. To see how our web page actually looks, we can ei
 
 Before we discuss the various elements provided in HTML to define different kinds of information, we need to discuss two basic types of display values: **Block and Inline**. In HTML, each element has a default display value depending on the kind of element. This will have more significance when we start styling our pages, but it is good to start thinking about this early.
 
-- **Block Elements** are those that are separate from the flow of the page. They are easy to move around and treat as separate entities from the whole page. Common examples of block elements include: paragraph `<p>`, heading tags `<h1>, <h2>... <h6>`, horizontal rule `<hr>`, table `<table>`, etc.  
-- **Inline Elements** are those that are within the flow of the page. All inline elements affect each other because they, by default, are stuck next to each other. Common examples of inline elements include: anchor `<a>`, span `<span>`, image `<img>`, etc. 
+- **Block Elements** are those that are separate from the flow of the page. They always start on a new line and take up the full width of the page even if their contents are not that wide. Common examples of block elements include: paragraph `<p>`, heading tags `<h1>, <h2>... <h6>`, horizontal rule `<hr>`, table `<table>`, etc.  
+- **Inline Elements** are those that are within the flow of the page. Inline elements always stay on the same line and take only as much space as necessary. Common examples of inline elements include: anchor `<a>`, span `<span>`, image `<img>`, etc. 
 
 ## <a name="text-format"></a>Text Formatting
 
