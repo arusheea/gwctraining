@@ -38,8 +38,10 @@ There are three ways to add CSS to our HTML documents:
 
 ## <a name="selectors"></a>Selectors
 
-Selectors can have different levels of specificity:
-- Tag names: 
+Selectors can have different levels of specificity. Take a look at `helloworld.html` for examples mentioned in the sub-points, and see how they affect the page [here](https://arusheea.github.io/gwctraining/css/helloworld.html):
+- Tag names: If we use a tag name as a selector, we apply the specified styles to all elements of that tag type across the page. For e.g. in `helloworld.html`, there is a `div` used as a selector. This means that all div tags on the page will have the specified styles, i.e. a solid red border, a width of 500 pixels, and an inner padding and outer margin of 15 pixels. 
+- Class names: Classes can be applied to multiple elements, even of different types, so we can use those to collectively style some elements. For e.g. in `helloworld.html` we use the class "selector" to style all the selector names differently. We wrap "tag name", "id", "classes", etc. in `<span>` tags with the class as "selector" and then use that in our CSS by using a '.' (period) followed by the class name. 
+- Id names: If you recall from the HTML module, id has to be unique in HTML, so each id can be used only once. So if we want to style one specific object differently, we can use the id selector by putting a '#' (pound sign) followed by the id. For e.g. in `helloworld.html`, we use the id "different-box" to specially style our third div tag. 
 
 ## <a name="help"></a>Online Help and Resources
 

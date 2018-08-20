@@ -6,14 +6,14 @@
 		<style type="text/css">
 			body {
 				margin: 0 auto;
-				background-color: deepskyblue;
+				background-color: #3F51B5;
 				color: white;
 				font-family: sans-serif;
 			}
 
 			div {
 				padding: 15px;
-				border: 2px black solid;
+				border: 2px red solid;
 				width: 500px;
 				margin: 15px;
 			}
@@ -21,11 +21,17 @@
 			#different-box {
 				border: 2px turquoise dashed;
 			}
+
+			.selector {
+				background-color: yellow;
+				color: black;
+			}
 		</style>
 	</head>
 	<body>
 		<div>Hello World</div>
-		<div>This is my first HTML document with CSS for style</div>
-		<div id="different-box">This box should be a bit different from the others</div>
+		<div>This is my first HTML document with CSS for style, and all the div elements are styled by <span class="selector">tag name</span></div>
+		<div id="different-box">This box should be a bit different from the others, because it has a different <span class="selector">id</span>, and styles for that <span class="selector">id</span>.</div>
+		<div>What if we wanted to apply some styles to a collection of objects? We can use <span class="selector">classes</span>. Like all the selectors in this document are styled similarly.</div>
 	</body>
 </html>
