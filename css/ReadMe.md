@@ -6,7 +6,7 @@ Now we have learned how to make a web page using HTML, but it doesn't look so pr
 
 - [Introduction: What is CSS?](#intro)
 - [Adding CSS to an HTML document](#adding)
-- [Selectors](#selectors)
+- [Basic Selectors](#selectors)
 - [Online Help and Resources](#help)
 - [Exercises](#exercises)
 
@@ -36,12 +36,14 @@ There are three ways to add CSS to our HTML documents:
 	- We separate style from content.
 	- More often than not, we have more than one web page in a website, and we want to keep the styling consistent for the website, and applying the same stylesheet to all pages is an easy way to do that. 
 
-## <a name="selectors"></a>Selectors
+## <a name="selectors"></a>Basic Selectors
 
-Selectors can have different levels of specificity. Take a look at `helloworld.html` for examples mentioned in the sub-points, and see how they affect the page [here](https://arusheea.github.io/gwctraining/css/helloworld.html):
-- Tag names: If we use a tag name as a selector, we apply the specified styles to all elements of that tag type across the page. For e.g. in `helloworld.html`, there is a `div` used as a selector. This means that all div tags on the page will have the specified styles, i.e. a solid red border, a width of 500 pixels, and an inner padding and outer margin of 15 pixels. 
-- Class names: Classes can be applied to multiple elements, even of different types, so we can use those to collectively style some elements. For e.g. in `helloworld.html` we use the class "selector" to style all the selector names differently. We wrap "tag name", "id", "classes", etc. in `<span>` tags with the class as "selector" and then use that in our CSS by using a '.' (period) followed by the class name. 
-- Id names: If you recall from the HTML module, id has to be unique in HTML, so each id can be used only once. So if we want to style one specific object differently, we can use the id selector by putting a '#' (pound sign) followed by the id. For e.g. in `helloworld.html`, we use the id "different-box" to specially style our third div tag. 
+Selectors can have different levels of specificity. We need to use selectors to tell our CSS which elements we are styling, unless we use Inline CSS, because with inline, we are only specifying styles for a single element. Take a look at `helloworld.html` for examples mentioned in the sub-points, and see how they affect the page [here](https://arusheea.github.io/gwctraining/css/helloworld.html):
+- **Tag names:** If we use a tag name as a selector, we apply the specified styles to all elements of that tag type across the page. For e.g. in `helloworld.html`, there is a `div` used as a selector. This means that all div tags on the page will have the specified styles, i.e. a solid red border, a width of 500 pixels, and an inner padding and outer margin of 15 pixels. 
+- **Class names:** Classes can be applied to multiple elements, even of different types, so we can use those to collectively style some elements. For e.g. in `helloworld.html` we use the class "selector" to style all the selector names differently. We wrap "tag name", "id", "classes", etc. in `<span>` tags with the class as "selector" and then use that in our CSS by using a '.' (period) followed by the class name. 
+- **Id names:** If you recall from the HTML module, id has to be unique in HTML, so each id can be used only once. So if we want to style one specific object differently, we can use the id selector by putting a '#' (pound sign) followed by the id. For e.g. in `helloworld.html`, we use the id "different-box" to specially style our third div tag. 
+
+We will discuss more about selectors, and cover different ways of choosing specific elements in a page later on, but I'm sure you can already tell how important it is to consider selectors carefully while styling a document because it can save you so much tedium. 
 
 ## <a name="help"></a>Online Help and Resources
 
