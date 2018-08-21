@@ -8,8 +8,12 @@ Now we have learned how to make a web page using HTML, but it doesn't look so pr
 - [Adding CSS to an HTML document](#adding)
 - [Basic Selectors](#selectors)
 - [What can we style?](#whatwedo)
-- [Some Examples](#examples)
+	- [Sizing and Spacing](#sns)
+	- [Background formatting, borders, and colors](#bgbordercol)
+	- [Display properties and positioning](#disp)
+	- [Text Formatting](#text)
 - [Advanced Selectors](#adv-select)
+- [Some Examples](#examples)
 - [Online Help and Resources](#help)
 - [Exercises](#exercises)
 
@@ -52,7 +56,7 @@ We will discuss more about selectors, and cover different ways of choosing speci
 
 Below we will discuss some common CSS properties, and the kinds of values they can take. 
 
-### Sizing and spacing of elements 
+### <a name="sns"></a>Sizing and spacing of elements 
 
 - `width` and `height`: Specify the width and height of an element with a unit (pixels px, cm, mm, etc.) or as a percentage of the containing element.
 - `max-width` and `max-height`: Specify the maximum width and height of the element. This is useful if the height and width are dependent on the page size, and we want to ensure it doesn't get larger than a certain size.
@@ -87,7 +91,7 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 
 - `box-sizing`: This is an important and interesting property. Its default value is content-box, which means that the width and height of an element do not include the borders and padding. The other value is border-box, which makes width and height include borders and padding. When we set box-sizing to border-box, the width and height are treated as the fixed values of width and height regardless of padding and borders. To understand this better, notice how the third div in `helloworld.html` is different from the others in terms of size. 
 
-### Background formatting, borders, and colors 
+### <a name="bgbordercol"></a>Background formatting, borders, and colors 
 
 > Note on CSS color values: Color can be specified using either 
 > - The 140 [predefined colors in HTML](https://www.w3schools.com/colors/colors_names.asp)
@@ -113,7 +117,7 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `border-radius`: This defines the curve radius of the element's corners. We can provide oen value (applied on all corners), two values (first for top-left, bottom-right and second for top-right, bottom-left), three values (first for top-left, second for top-right, bottom-left, and third for bottom-right), and four values (for top-left, top-right, bottom-right, bottom-left respectively). There are also specific properties for the top-left, top-right, bottom-left and bottom-right border radii. 
 - `border-collapse`: This is primarily useful for tables because once we put a border value for tables, and their lines actually show up, they are double lines usually. Border collapse makes these double lines coverge into single lines for clean tables. The value just has to be set to 'collapse'. 
 
-### Display properties and positioning 
+### <a name="disp"></a>Display properties and positioning 
 
 - `display`: Changes the default display value of elements to block, inline, inline-block, and none (removes the element from the document). Block and Inline were discussed in the HTML module, but inline-block is different in that it stays on the same line like inline elements but respects width, height, padding and margin properties provided (which inline elements do not).
 - `text-align`: Controls the alignment of text within an container, can be center, left, right etc. 
@@ -127,7 +131,7 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `float`: Non-absolute positioned elements can float. Float is none by default but we can specify left or right to make elements move to the right or left by default. 
 - `z-index`: This property is a number that specifies the arrangement of elements in the front or back of the page. The higher the z-index of an element, the higher up it will stack. So if two elements overlap at all, the one with a higher z-index will be at the top. 
 
-### Text formatting
+### <a name="text"></a>Text formatting
 
 - `font-family`: Specifies the font family we wish to use in a given element. We can also write serif, sans-serif, or monospace to get the default fonts in each category. 
 - `font-size`: Specifies the size of the text in the element.
