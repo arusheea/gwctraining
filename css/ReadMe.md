@@ -172,6 +172,7 @@ There are several more, that you mihgt choose to use in the future, and I recomm
 ## <a name="examples"></a>Some Examples 
 
 - Check out `navbar.html` and `navbar.css` for an example webpage with a navigation bar stuck to the top of a page. You can see it live [here](https://arusheea.github.io/gwctraining/css/navbar.html). 
+- Check out `image-frames.html` and `image-frames.css` for an example webpage with one image shown as the original, framed in a square and framed in a circle, using only CSS. This is useful for when our image files cannot be directly edited by us and we need to make it look a certain way, by cropping or framing it. You can see it live [here](https://arusheea.github.io/gwctraining/css/image-frames.html).
 
 ## <a name="help"></a>Online Help and Resources
 
