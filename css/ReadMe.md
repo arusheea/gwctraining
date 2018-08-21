@@ -139,13 +139,35 @@ Below we will discuss some common CSS properties, and the kinds of values they c
 - `word-spacing`: Specifies size of the whitespace between words. 
 - `text-decoration`: Allows us to specify the type(s) of text-decoration we want (underline, overline, or line-through), the color of the text-decoration, and the style (solid, wavy, dotted, dashed etc.) like so: `text-decoration-line text-decoration-color text-decoration-style` in any order. All three of these are also individual properties. Only the first value (line) is required out of the three. 
 
+## <a name="adv-select"></a>Advanced Selectors
+
+We already know how to select and apply styles to tags of one type, elements with a certain class, and an element with a specific id. But you will learn that often when styling pages, we cannot easily/at all alter the HTML of the page, which means we cannot go in and manually add id and class names. Sometimes it is just too tedious to do so as well, when we have a complex but clear type of element that needs a certain kind of styling. For these situations, we can use more advanced selectors. 
+
+- `element1, element2`: Applies styles to all elements of type element1, element2 etc. For e.g. `div, p` will apply styles to all div and p tags. 
+- `element1 element2`: Notice that these are space separated, and not comma separated. This applies styles to all right-most elements within ancestors of the type to their left. For e.g. `div p` will apply styles to all the p tags within div tags. 
+- `element1 > element2`: This applies styles to all elements of the second type with elements of the first type as *parents* (not the same as ancestor). 
+- `element1 + element2`: Applies styles to all elements of second type directly after elements of the first type. 
+- `element1 ~ element2`: Applies styles to all elements of second type that come after elements of the first type.
+- `[attribute]`: Selects elements with the specified attribute.
+- `[attribute=value]`: Selects elements with the specified attribute and the specified value. For e.g. `input[type=text]` will select all text input tags. 
+- `[attribute~=value]` and `[attribute*=value]`: Selects elements with the specified attribute and a value that contains the specified value.
+- `[attribute|=value]` and `[attribute^=value]`: Selects elements with the specified attribute and a value that begins with the specified value.
+- `[attribute$=value]`: Selects elements with the specified attribute and a value that ends with the specified value.
+- `element:active`: Primarily used with anchor tags, to select active (currently clicked) links by using `a:active`. 
+- `element::after` and `element::before`: Insert something after/before the specified element. Usually contains a `content` property that specifies what is being added. 
+- `element:checked`: Selects checked input usually, by using `input:checked`.
+- `element:disabled` and `element:enabled`: Selects disabled/enabled input fields usually. 
+- `element:first-child` and `:last-child`: Selects the specified elements that are first/last children of their parents.
+- `element:first-of-type` and `last-of-type`: Selects the specified elements that are the first/last of their type within their parent tags. 
+- `element:hover`: Selects elements of specified type when they are hovered over. 
+- `element:not(selector)`: Selects all elements that are not of type selector. 
+- `element:visited`: Selects all visited elements of the given type, often used for anchor tags that have been clicked before. 
+
+There are several more, that you mihgt choose to use in the future, and I recommend using [this](https://www.w3schools.com/cssref/css_selectors.asp) for a full list, with examples. 
+
 ## <a name="examples"></a>Some Examples 
 
 - Check out `navbar.html` and `navbar.css` for an example webpage with a navigation bar stuck to the top of a page. You can see it live [here](https://arusheea.github.io/gwctraining/css/navbar.html). 
-
-## <a name="adv-select"></a>Advanced Selectors
-
-More material will be added here soon! 
 
 ## <a name="help"></a>Online Help and Resources
 
